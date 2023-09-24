@@ -412,8 +412,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(50);
- 800037c:	2032      	movs	r0, #50	; 0x32
+  setTimer1(100);
+ 800037c:	2064      	movs	r0, #100	; 0x64
  800037e:	f000 f9a7 	bl	80006d0 <setTimer1>
   setTimer2(100);
  8000382:	2064      	movs	r0, #100	; 0x64
@@ -590,8 +590,8 @@ int main(void)
  80004c2:	601a      	str	r2, [r3, #0]
 		 }
 
-		 setTimer1(50);
- 80004c4:	2032      	movs	r0, #50	; 0x32
+		 setTimer1(100);
+ 80004c4:	2064      	movs	r0, #100	; 0x64
  80004c6:	f000 f903 	bl	80006d0 <setTimer1>
 	 }
 
