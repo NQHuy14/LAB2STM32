@@ -2204,10 +2204,10 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .text          0x000000000800010c       0x40 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.text*)
  .text.display7SEG
-                0x000000000800014c       0xe0 ./Core/Src/main.o
+                0x000000000800014c       0xb4 ./Core/Src/main.o
                 0x000000000800014c                display7SEG
- .text.main     0x000000000800022c       0x60 ./Core/Src/main.o
-                0x000000000800022c                main
+ .text.main     0x0000000008000200       0x8c ./Core/Src/main.o
+                0x0000000008000200                main
  .text.SystemClock_Config
                 0x000000000800028c       0x76 ./Core/Src/main.o
                 0x000000000800028c                SystemClock_Config
