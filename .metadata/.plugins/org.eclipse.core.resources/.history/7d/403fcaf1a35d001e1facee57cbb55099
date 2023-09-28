@@ -280,7 +280,6 @@ int main(void)
 	 }
 
 	 if(timer1_flag==1){
-		 update7SEG(index_led++);
 		 if(counter==0){
 			 HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
 			 counter=1;
@@ -294,7 +293,7 @@ int main(void)
 			 HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET);
 			 counter=0;
 		 }
-
+		 update7SEG(index_led++);
 		 if(index_led>=MAX_LED){
 			 index_led=0;
 		 }
