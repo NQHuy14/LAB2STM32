@@ -282,6 +282,7 @@ int main(void)
 	 if(timer1_flag==1){
 		 update7SEG(index_led++);
 		 if(counter==0){
+
 			 HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
 			 counter=1;
 		 }else if(counter==1){
