@@ -1,6 +1,8 @@
-09:08:43 **** Incremental Build of configuration Debug for project LAB2 ****
+20:50:07 **** Incremental Build of configuration Debug for project LAB2 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
 ../Core/Src/main.c: In function 'main':
 ../Core/Src/main.c:260:3: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer2'? [-Wimplicit-function-declaration]
   260 |   setTimer3(10);
@@ -12,9 +14,9 @@ Finished building target: LAB2.elf
 arm-none-eabi-size   LAB2.elf 
 arm-none-eabi-objdump -h -S  LAB2.elf  > "LAB2.list"
 arm-none-eabi-objcopy  -O ihex  LAB2.elf  "LAB2.hex"
+arm-none-eabi-objcopy  -O binary  LAB2.elf  "LAB2.bin"
    text	   data	    bss	    dec	    hex	filename
    8620	     36	   1668	  10324	   2854	LAB2.elf
-arm-none-eabi-objcopy  -O binary  LAB2.elf  "LAB2.bin"
 Finished building: default.size.stdout
  
 Finished building: LAB2.hex
